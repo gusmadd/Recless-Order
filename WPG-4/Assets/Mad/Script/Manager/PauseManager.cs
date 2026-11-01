@@ -50,6 +50,7 @@ public class PauseManager : MonoBehaviour
 
             if (state == M_GameManager.GameState.QTE ||
                 state == M_GameManager.GameState.TaskOverlay ||
+                state == M_GameManager.GameState.AdsOverlay ||
                 state == M_GameManager.GameState.Paused)
             {
                 shouldShow = false;
@@ -71,6 +72,7 @@ public class PauseManager : MonoBehaviour
 
         if (state == M_GameManager.GameState.QTE) return false;
         if (state == M_GameManager.GameState.TaskOverlay) return false;
+        if (state == M_GameManager.GameState.AdsOverlay) return false;
         if (state == M_GameManager.GameState.Paused) return false;
 
         return true;
